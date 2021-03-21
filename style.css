@@ -30,6 +30,7 @@ a {
 	-moz-user-select: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
+	text-shadow: none;
 }
 
 a div, a::after {
@@ -126,6 +127,32 @@ div.container {
 	justify-content: center;
 	height: 100vh;
 	background-size: cover;
+	/*background-attachment: fixed;*/
+	position: relative;
+	perspective: 1px;
+	overflow: hidden;
+}
+
+div.parallax-image {
+	transform: translateZ(-1px) scale(2);
+	position: absolute;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
+div.container.dark {
+	/*text-shadow: 2px 2px 3px #000;*/
+}
+
+.image-attribute {
+	bottom: 0;
+	right: 0;
+	position: absolute;
+}
+
+.image-attribute * {
+	text-transform: none!important;
 }
 
 body, html {
