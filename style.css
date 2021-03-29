@@ -116,6 +116,10 @@ p.z {
 	max-width: 640px;
 }
 
+p.z * {
+	text-transform: none;
+}
+
 div.container {
 	display: flex;
 	flex-direction: column;
@@ -131,6 +135,7 @@ div.container {
 	position: relative;
 	perspective: 1px;
 	overflow: hidden;
+	scroll-snap-align: center;
 }
 
 div.parallax-image {
@@ -165,7 +170,9 @@ body, html {
 	min-height: 100%;
 	margin: 0;
 	font-family: /* "New Rail Alphabet", */ Metropolis, sans-serif;
+	font-variant: tabular-nums;
 	flex-grow: 1;
+	scroll-snap-type: y mandatory;
 }
 
 .dark {
